@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <!-- main menu -->
+  <menuitem id="openhospital_main_menu" name="Open Hospital" />
+
+  <!-- sub menus -->
+  <menuitem id="openhospital_patient_menu" name="Patients" action="openhospital_patient_action" parent="openhospital_main_menu" />
+
+</odoo>

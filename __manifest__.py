@@ -19,7 +19,10 @@
     'depends': ['base'],
 
     # always loaded
-    'data': [],
+    'data': [
+        'views/patient_views.xml',
+        'views/menus.xml',
+    ],
 
     # only loaded in demonstration mode
     'demo': [],
