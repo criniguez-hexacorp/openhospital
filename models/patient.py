@@ -4,6 +4,7 @@ from odoo import api, fields, models
 class HospitalPatient(models.Model):
     _name = 'openhospital.patient'
     _description = 'Hospital Patient'
+    _rec_name = 'name'
 
     name = fields.Char(string='Name', required=True)
     age = fields.Integer(string='Age')
