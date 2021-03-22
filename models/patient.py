@@ -3,6 +3,7 @@ from odoo import api, fields, models
 
 class HospitalPatient(models.Model):
     _name = 'openhospital.patient'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Hospital Patient'
     _rec_name = 'name'
 
