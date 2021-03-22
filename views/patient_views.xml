@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+  <!-- form view -->
+  <record id="openhospital_patient_view_form" model="ir.ui.view">
+    <field name="name">openhospital.patient.view.form</field>
+    <field name="model">openhospital.patient</field>
+    <field name="arch" type="xml">
+      <form string="Patients Form">
+        <sheet>
+          <group>
+            <group>
+              <field name="name" />
+            </group>
+            <group>
+              <field name="age" />
+            </group>
+          </group>
+          <group>
+            <field name="notes" />
+            <field name="image" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!-- tree view -->
+  <record id="openhospital_patient_view_tree" model="ir.ui.view">
+    <field name="name">openhospital.patient.view.tree</field>
+    <field name="model">openhospital.patient</field>
+    <field name="arch" type="xml">
+      <tree string="Patients">
+        <field name="name" />
+        <field name="age" />
+        <field name="notes" />
+      </tree>
+    </field>
+  </record>
+
   <!-- action -->
   <record id="openhospital_patient_action" model="ir.actions.act_window">
     <field name="name">Patients</field>
