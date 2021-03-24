@@ -23,6 +23,7 @@
         'security/ir.model.access.csv',
         'data/ir_sequence_data.xml',
         'views/openhospital_patient_views.xml',
+        'views/openhospital_appointment_views.xml',
         'views/sale_order_views.xml',
         'views/openhospital_menus.xml',
     ],

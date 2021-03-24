@@ -6,5 +6,6 @@
 
   <!-- sub menus -->
   <menuitem id="openhospital_patient_menu" name="Patients" action="openhospital_patient_action" parent="openhospital_main_menu" />
+  <menuitem id="openhospital_appointment_menu" name="Appointments" action="openhospital_appointment_action" parent="openhospital_main_menu" />
 
 </odoo>
