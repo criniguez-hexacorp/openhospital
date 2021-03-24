@@ -1,4 +1,4 @@
-from odoo import api, fields, models, _
+from odoo import api, fields, models, exceptions, _
 
 
 class HospitalPatient(models.Model):
@@ -6,6 +6,14 @@ class HospitalPatient(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Hospital Patient'
     _rec_name = 'name'
+
+    @api.constrains('age')
+    def _check_age(self):
+        for rec in self:
+            if rec.age <= 5:
+                raise exceptions.ValidationError(
+                    _('Patient age must be greater than 5')
+                )
 
     @api.depends('age')
     def _set_age_group(self):
