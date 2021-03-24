@@ -18,7 +18,9 @@ class HospitalPatient(models.Model):
             else:
                 rec.age_group = ''
 
-    name = fields.Char(string='Name', required=True)
+    name = fields.Char(
+        string='Name', required=True, track_visibility='always'
+    )
     name_seq = fields.Char(
         string='Patient ID', required=True, copy=False, readonly=True, index=True, default=lambda self: _('New')
     )
@@ -27,7 +29,7 @@ class HospitalPatient(models.Model):
         selection=[('male', 'Male'), ('female', 'Female')],
         default='male'
     )
-    age = fields.Integer(string='Age')
+    age = fields.Integer(string='Age', track_visibility='always')
     age_group = fields.Selection(
         string='Age Group',
         selection=[('major', 'Major'), ('minor', 'Minor')],
