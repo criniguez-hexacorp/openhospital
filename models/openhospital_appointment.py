@@ -16,6 +16,9 @@ class HospitalAppointment(models.Model):
         result = super(HospitalAppointment, self).create(vals)
         return result
 
+    def _get_default_notes(self):
+        return "New Appointment"
+
     name = fields.Char(
         string='Appointment ID', required=True, copy=False, readonly=True, index=True, default=lambda self: _('New')
     )
@@ -24,4 +27,6 @@ class HospitalAppointment(models.Model):
     )
     patient_age = fields.Integer(string='Age', related='patient_id.age')
     date = fields.Date(string='Date', required=True)
-    notes = fields.Text(string='Registration Notes')
+    notes = fields.Text(
+        string='Registration Notes', default=_get_default_notes
+    )
