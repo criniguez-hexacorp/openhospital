@@ -35,6 +35,20 @@
     </field>
   </record>
 
+  <!-- tree view -->
+  <record id="openhospital_appointment_view_tree" model="ir.ui.view">
+    <field name="name">openhospital.appointment.view.tree</field>
+    <field name="model">openhospital.appointment</field>
+    <field name="arch" type="xml">
+      <tree string="Appointments">
+        <field name="name" />
+        <field name="patient_id" />
+        <field name="patient_age" />
+        <field name="date" />
+      </tree>
+    </field>
+  </record>
+
   <!-- action -->
   <record id="openhospital_appointment_action" model="ir.actions.act_window">
     <field name="name">Appointments</field>

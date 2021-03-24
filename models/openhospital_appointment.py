@@ -5,6 +5,7 @@ class HospitalAppointment(models.Model):
     _name = 'openhospital.appointment'
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Hospital Appointment'
+    _order = 'date desc'
 
     @api.model
     def create(self, vals):
