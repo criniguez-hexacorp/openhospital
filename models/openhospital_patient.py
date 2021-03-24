@@ -9,7 +9,12 @@ class HospitalPatient(models.Model):
 
     name = fields.Char(string='Name', required=True)
     name_seq = fields.Char(
-        string='Order Reference', required=True, copy=False, readonly=True, index=True, default=lambda self: _('New')
+        string='Patient ID', required=True, copy=False, readonly=True, index=True, default=lambda self: _('New')
+    )
+    gender = fields.Selection(
+        string='Gender',
+        selection=[('male', 'Male'), ('female', 'Female')],
+        default='male'
     )
     age = fields.Integer(string='Age')
     notes = fields.Text(string='Notes')
