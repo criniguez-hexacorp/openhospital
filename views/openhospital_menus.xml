@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+  <!-- actions -->
+
+  <!-- openhospital.patient actions -->
+  <record id="openhospital_patient_action" model="ir.actions.act_window">
+    <field name="name">Patients</field>
+    <field name="res_model">openhospital.patient</field>
+    <field name="view_mode">tree,form</field>
+    <field name="context">{"search_default_female": 1}</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Create your First Patient!</p>
+    </field>
+  </record>
+
+  <!-- openhospital.appointment actions -->
+  <record id="openhospital_appointment_action" model="ir.actions.act_window">
+    <field name="name">Appointments</field>
+    <field name="res_model">openhospital.appointment</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Create your First Appointment!</p>
+    </field>
+  </record>
+  <record id="openhospital_appointments_patient_action" model="ir.actions.act_window">
+    <field name="name">Appointments</field>
+    <field name="res_model">openhospital.appointment</field>
+    <field name="view_mode">tree,form</field>
+    <field name="domain">[('patient_id', '=', active_id)]</field>
+    <field name="context">{}</field>
+  </record>
+
+  <!-- menus -->
+
   <!-- main menu -->
   <menuitem id="openhospital_main_menu" name="Open Hospital" />
 

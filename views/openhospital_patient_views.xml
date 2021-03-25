@@ -10,7 +10,10 @@
         <sheet>
           <div class="oe_button_box" name="button_box">
             <button name="open_appointments" type="object" class="oe_stat_button" icon="fa-calendar">
-              <field string="Appointments" name="appointments_count" widget="statinfo" />
+              <field name="appointments_count" string="Appointments" widget="statinfo" />
+            </button>
+            <button name="%(openhospital_appointments_patient_action)d" type="action" class="oe_stat_button" icon="fa-usd">
+              <field name="appointments_count" string="Appointments" widget="statinfo" />
             </button>
           </div>
           <field name="image" widget="image" class="oe_avatar" />
@@ -74,17 +77,6 @@
           <filter string="Gender" name="gender" context="{'group_by': 'gender'}" />
         </group>
       </search>
-    </field>
-  </record>
-
-  <!-- action -->
-  <record id="openhospital_patient_action" model="ir.actions.act_window">
-    <field name="name">Patients</field>
-    <field name="res_model">openhospital.patient</field>
-    <field name="view_mode">tree,form</field>
-    <field name="context">{"search_default_female": 1}</field>
-    <field name="help" type="html">
-      <p class="o_view_nocontent_smiling_face">Create your First Patient!</p>
     </field>
   </record>
 
