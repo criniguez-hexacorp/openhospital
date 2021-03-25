@@ -26,6 +26,8 @@
         'views/openhospital_patient_views.xml',
         'views/openhospital_appointment_views.xml',
         'views/sale_order_views.xml',
+        'reports/openhospital_patient_reports.xml',
+        'reports/openhospital_patient_templates.xml',
     ],
 
     # only loaded in demonstration mode
