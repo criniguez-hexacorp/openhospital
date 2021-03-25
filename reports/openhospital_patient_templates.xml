@@ -6,13 +6,53 @@
       <t t-foreach="docs" t-as="doc">
         <t t-call="web.external_layout">
           <div class="page">
-            <h2>Test Print</h2>
-            ID:
-            <t t-esc="doc.name_seq" />
-            Name:
-            <t t-esc="doc.name" />
-            Age:
-            <t t-esc="doc.age" />
+            <div class="oe_structure" />
+            <div class="row">
+              <div class="col-xs-2" style="margin: auto" />
+              <center>
+                <div class="col-xs-8" style="margin: auto">
+                  <table class="table table-condensed" style="border: 3px solid black !important">
+                    <tr>
+                      <td width="40%">
+                        <p style="text-align: center; padding-top: 10px">
+                          <img t-if="not doc.image" src="/web/static/src/img/placeholder.png" height="120" border="1" width="120" />
+                          <img t-if="doc.image" t-att-src="'data:image/png;base64,%s' % to_text(doc.image)" height="120" border="1" width="120" />
+                        </p>
+                        <p style="text-align: center">
+                          <h2>
+                            <strong>
+                              <span t-field="doc.name" />
+                            </strong>
+                          </h2>
+                        </p>
+                      </td>
+                      <td width="60%">
+                        <table>
+                          <tr>
+                            <td>
+                              <p style="text-align: right">
+                                <strong>Age: </strong>
+                              </p>
+                              <p style="text-align: right">
+                                <strong>Group: </strong>
+                              </p>
+                              <p style="text-align: right">
+                                <strong>Ph No: </strong>
+                              </p>
+                            </td>
+                            <td>
+                              <p style="text-align: left; padding-left: 10px" t-field="doc.age" />
+                              <p style="text-align: left; padding-left: 10px" t-field="doc.age_group" />
+                              <p style="text-align: left; padding-left: 10px" t-field="doc.name_seq" />
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </center>
+            </div>
           </div>
         </t>
       </t>
