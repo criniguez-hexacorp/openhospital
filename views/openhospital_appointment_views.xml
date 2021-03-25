@@ -30,6 +30,18 @@
           <group>
             <field name="notes" />
           </group>
+          <notebook>
+            <page name="doctor_description" string="Doctor description">
+              <group>
+                <field name="doctor_notes" />
+              </group>
+            </page>
+            <page name="pharmacy" string="Pharmacy">
+              <group>
+                <field name="pharmacy_notes" />
+              </group>
+            </page>
+          </notebook>
         </sheet>
         <div class="oe_chatter">
           <field name="message_follower_ids" widget="mail_followers" />
