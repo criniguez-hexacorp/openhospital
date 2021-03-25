@@ -19,6 +19,14 @@ class HospitalAppointment(models.Model):
     def _get_default_notes(self):
         return "New Appointment"
 
+    def action_confirm(self):
+        for rec in self:
+            rec.state = 'confirmed'
+
+    def action_done(self):
+        for rec in self:
+            rec.state = 'done'
+
     name = fields.Char(
         string='Appointment ID', required=True, copy=False, readonly=True, index=True, default=lambda self: _('New')
     )

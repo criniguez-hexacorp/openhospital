@@ -8,6 +8,8 @@
     <field name="arch" type="xml">
       <form string="Appointments Form">
         <header>
+          <button string="Confirm" name="action_confirm" type="object" states="draft" class="oe_highlight" />
+          <button string="Done" name="action_done" type="object" states="confirmed" class="oe_highlight" />
           <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,done" />
         </header>
         <sheet>
