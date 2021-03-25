@@ -21,6 +21,8 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'data/openhospital_patient_data.xml',
+        'data/openhospital_appointment_data.xml',
         'data/ir_sequence_data.xml',
         'views/openhospital_menus.xml',
         'views/openhospital_patient_views.xml',

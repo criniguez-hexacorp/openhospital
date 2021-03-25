@@ -34,7 +34,9 @@ class HospitalAppointment(models.Model):
         'openhospital.patient', string='Patient', required=True
     )
     patient_age = fields.Integer(string='Age', related='patient_id.age')
-    date = fields.Date(string='Date', required=True)
+    date = fields.Date(
+        string='Date', required=True, default=fields.Date.today
+    )
     notes = fields.Text(
         string='Registration Notes', default=_get_default_notes
     )

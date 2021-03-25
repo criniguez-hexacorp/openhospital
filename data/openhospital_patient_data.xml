@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data noupdate="1">
+
+    <record id="patient_01" model="openhospital.patient">
+      <field name="name">Cristian Jordan</field>
+      <field name="age">23</field>
+      <field name="notes">Red eyes</field>
+    </record>
+
+    <record id="patient_02" model="openhospital.patient">
+      <field name="name">Nicol Delgado</field>
+      <field name="age">23</field>
+      <field name="gender">female</field>
+      <field name="notes">Short hair</field>
+    </record>
+
+  </data>
+</odoo>
