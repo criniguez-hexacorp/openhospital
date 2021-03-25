@@ -30,3 +30,9 @@ class HospitalAppointment(models.Model):
     notes = fields.Text(
         string='Registration Notes', default=_get_default_notes
     )
+    state = fields.Selection([
+        ('draft', 'Draft'),
+        ('confirmed', 'Confirmed'),
+        ('done', 'Done'),
+        ('canceled', 'Canceled'),
+    ], string='Status', readonly=True, copy=False, index=True, tracking=3, default='draft')
