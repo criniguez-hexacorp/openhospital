@@ -8,6 +8,7 @@
     <field name="arch" type="xml">
       <form string="Patients Form">
         <sheet>
+          <field name="active" invisible="1" />
           <div class="oe_button_box" name="button_box">
             <button name="open_appointments" type="object" class="oe_stat_button" icon="fa-calendar">
               <field name="appointments_count" string="Appointments" widget="statinfo" />

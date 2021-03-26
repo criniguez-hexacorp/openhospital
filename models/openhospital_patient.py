@@ -43,6 +43,9 @@ class HospitalPatient(models.Model):
         )
         self.appointments_count = count
 
+    # def toggle_active(self):
+    #     pass
+
     name = fields.Char(
         string='Name', required=True, track_visibility='always'
     )
@@ -65,6 +68,7 @@ class HospitalPatient(models.Model):
     appointments_count = fields.Integer(
         string='Appointments Count', compute='_get_appointment_count'
     )
+    active = fields.Boolean(string='Active', default=True)
 
     @api.model
     def create(self, vals):
