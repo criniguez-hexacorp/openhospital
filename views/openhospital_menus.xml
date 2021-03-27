@@ -14,6 +14,13 @@
     </field>
   </record>
 
+  <!-- openhospital.doctor actions -->
+  <record id="openhospital_doctor_action" model="ir.actions.act_window">
+    <field name="name">Doctors</field>
+    <field name="res_model">openhospital.doctor</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
   <!-- openhospital.appointment actions -->
   <record id="openhospital_appointment_action" model="ir.actions.act_window">
     <field name="name">Appointments</field>
@@ -38,6 +45,7 @@
 
   <!-- sub menus -->
   <menuitem id="openhospital_patient_menu" name="Patients" action="openhospital_patient_action" parent="openhospital_main_menu" />
+  <menuitem id="openhospital_doctor_menu" name="Doctors" action="openhospital_doctor_action" parent="openhospital_main_menu" />
   <menuitem id="openhospital_appointment_menu" name="Appointments" action="openhospital_appointment_action" parent="openhospital_main_menu" />
 
 </odoo>

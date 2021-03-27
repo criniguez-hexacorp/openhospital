@@ -28,6 +28,7 @@
               <field name="name" />
               <field name="age" />
               <field name="gender" />
+              <field name="doctor_id" />
             </group>
             <group>
               <field name="age_group" />
