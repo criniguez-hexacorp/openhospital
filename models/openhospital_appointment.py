@@ -48,3 +48,6 @@ class HospitalAppointment(models.Model):
         ('done', 'Done'),
         ('canceled', 'Canceled'),
     ], string='Status', readonly=True, copy=False, index=True, tracking=3, default='draft')
+    appointment_line_ids = fields.One2many(
+        'openhospital.appointment.line', 'appointment_id', string='Appointment Lines'
+    )
