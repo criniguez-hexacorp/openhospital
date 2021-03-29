@@ -55,6 +55,13 @@ class HospitalPatient(models.Model):
             if rec.doctor_id:
                 rec.doctor_gender = rec.doctor_id.gender
 
+    def action_patient_card_send(self):
+        template_id = self.env.ref(
+            'openhospital.email_template_patient_card').id
+        template = self.env['mail.template'].browse(
+            template_id)
+        template.send_mail(self.id, force_send=True)
+
     name = fields.Char(
         string='Name', required=True, track_visibility='always'
     )
