@@ -83,6 +83,8 @@ class HospitalPatient(models.Model):
         string='Doctor Gender',
         selection=[('male', 'Male'), ('female', 'Female')],
     )
+    email = fields.Char(string='Email')
+    user_id = fields.Many2one('res.users', string='PRO')
 
     @api.model
     def create(self, vals):

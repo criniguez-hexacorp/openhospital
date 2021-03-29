@@ -31,11 +31,13 @@
               <field name="name" />
               <field name="age" />
               <field name="gender" />
-              <field name="doctor_id" options="{'no_create_edit': True, 'no_create': True, 'no_open': True}" />
-              <field name="doctor_gender" />
+              <field name="email" />
             </group>
             <group>
               <field name="age_group" />
+              <field name="doctor_id" options="{'no_create_edit': True, 'no_create': True, 'no_open': True}" />
+              <field name="doctor_gender" />
+              <field name="user_id" />
             </group>
           </group>
           <group>
