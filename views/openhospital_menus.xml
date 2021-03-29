@@ -37,6 +37,14 @@
     <field name="domain">[('patient_id', '=', active_id)]</field>
     <field name="context">{}</field>
   </record>
+  <record id="openhospital_appointments_patient_action_2" model="ir.actions.act_window">
+    <field name="name">Appointments</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">openhospital.appointment</field>
+    <field name="domain">[('patient_id', '=', active_id)]</field>
+    <field name="view_mode">tree,form</field>
+    <field name="binding_model_id" ref="model_openhospital_patient" />
+  </record>
 
   <!-- menus -->
 
