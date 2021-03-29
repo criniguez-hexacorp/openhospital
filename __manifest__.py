@@ -25,6 +25,7 @@
         'data/openhospital_patient_data.xml',
         'data/openhospital_appointment_data.xml',
         'data/ir_sequence_data.xml',
+        'wizard/openhospital_appointment_create.xml',
         'views/openhospital_menus.xml',
         'views/openhospital_patient_views.xml',
         'views/openhospital_appointment_views.xml',

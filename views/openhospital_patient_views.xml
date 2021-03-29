@@ -7,6 +7,9 @@
     <field name="model">openhospital.patient</field>
     <field name="arch" type="xml">
       <form string="Patients Form">
+        <header>
+          <button string="Create Appointment" name="%(openhospital_appointment_create_wizard_action)d" type="action" class="oe_highlight" />
+        </header>
         <sheet>
           <field name="active" invisible="1" />
           <div class="oe_button_box" name="button_box">
