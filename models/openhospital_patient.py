@@ -7,6 +7,12 @@ class HospitalPatient(models.Model):
     _description = 'Hospital Patient'
     _rec_name = 'name'
 
+    def name_get(self):
+        res = []
+        for rec in self:
+            res.append((rec.id, '%s - %s' % (rec.name_seq, rec.name)))
+        return res
+
     @api.constrains('age')
     def _check_age(self):
         for rec in self:
