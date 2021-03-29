@@ -6,3 +6,11 @@ class HospitalAppointmentCreate(models.TransientModel):
 
     patient_id = fields.Many2one('openhospital.patient', string='Patient')
     date = fields.Date(string='Date')
+
+    def create_appointment(self):
+        vals = {
+            'patient_id': self.patient_id.id,
+            'date': self.date,
+            'notes': 'Created from the wizard'
+        }
+        self.env['openhospital.appointment'].create(vals)
