@@ -9,7 +9,7 @@
       <form string="Patients Form">
         <header>
           <button string="Create Appointment" name="%(openhospital_appointment_create_wizard_action)d" type="action" class="oe_highlight" context="{'default_patient_id': active_id}" />
-          <button string="Send Patient Card" name="action_patient_card_send" type="object" class="oe_highlight" />
+          <button string="Send Patient Card" name="action_patient_card_send" type="object" class="oe_highlight" groups="openhospital.group_openhospital_manager" />
         </header>
         <sheet>
           <field name="active" invisible="1" />
@@ -32,7 +32,7 @@
               <field name="name" />
               <field name="age" />
               <field name="gender" />
-              <field name="email" />
+              <field name="email" groups="openhospital.group_openhospital_manager" />
             </group>
             <group>
               <field name="age_group" />
