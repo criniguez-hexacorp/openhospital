@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-  <report id="action_report_openhospital_patient" model="openhospital.patient" string="Patient Report" report_type="qweb-pdf" name="openhospital.report_patient" file="openhospital.report_patient" />
+  <report id="action_report_openhospital_patient_pdf" model="openhospital.patient" string="Patient Card - PDF" report_type="qweb-pdf" name="openhospital.report_patient_pdf" file="openhospital.report_patient_pdf" />
+
+  <report id="action_report_openhospital_patient_xlsx" model="openhospital.patient" string="Patient Card - XLSX" report_type="xlsx" name="openhospital.report_patient_xlsx" file="openhospital.report_patient_xlsx" />
 
 </odoo>

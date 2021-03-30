@@ -16,7 +16,10 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'mail', 'sale'],
+    'depends': [
+        'base', 'mail', 'sale',
+        'report_xlsx'  # https://apps.odoo.com/apps/modules/13.0/report_xlsx/
+    ],
 
     # always loaded
     'data': [
