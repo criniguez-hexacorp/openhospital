@@ -2,4 +2,5 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_openhospital_patient,access.openhospital.patient,model_openhospital_patient,,1,1,1,1
 access_openhospital_doctor,access.openhospital.doctor,model_openhospital_doctor,,1,1,1,1
 access_openhospital_appointment,access.openhospital.appointment,model_openhospital_appointment,,1,1,1,1
-access_openhospital_appointment_line,access.openhospital.appointment_line,model_openhospital_appointment_line,,1,1,1,1
+access_openhospital_appointment_line,access.openhospital.appointment.line,model_openhospital_appointment_line,,1,1,1,1
+access_openhospital_lab,access.openhospital.lab,model_openhospital_lab,group_openhospital_lab_user,1,1,1,1

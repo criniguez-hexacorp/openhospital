@@ -46,6 +46,16 @@
     <field name="binding_model_id" ref="model_openhospital_patient" />
   </record>
 
+  <!-- openhospital.lab actions -->
+  <record id="openhospital_lab_action" model="ir.actions.act_window">
+    <field name="name">Labs</field>
+    <field name="res_model">openhospital.lab</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Create your First Lab!</p>
+    </field>
+  </record>
+
   <!-- menus -->
 
   <!-- main menu -->
@@ -55,6 +65,7 @@
   <menuitem id="openhospital_patient_menu" name="Patients" action="openhospital_patient_action" parent="openhospital_main_menu" />
   <menuitem id="openhospital_doctor_menu" name="Doctors" action="openhospital_doctor_action" parent="openhospital_main_menu" />
   <menuitem id="openhospital_appointment_menu" name="Appointments" action="openhospital_appointment_action" parent="openhospital_main_menu" />
+  <menuitem id="openhospital_lab_menu" name="Laboratories" action="openhospital_lab_action" parent="openhospital_main_menu" />
   <menuitem id="openhospital_appointment_create_menu" name="Create Appointment" action="openhospital_appointment_create_wizard_action" parent="openhospital_main_menu" />
 
 </odoo>

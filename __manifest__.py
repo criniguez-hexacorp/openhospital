@@ -40,6 +40,7 @@
         'views/openhospital_menus.xml',
         'views/openhospital_patient_views.xml',
         'views/openhospital_appointment_views.xml',
+        'views/openhospital_lab_views.xml',
         'views/sale_order_views.xml',
 
     ],
