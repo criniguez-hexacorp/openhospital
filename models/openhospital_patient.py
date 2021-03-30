@@ -32,6 +32,15 @@ class HospitalPatient(models.Model):
             else:
                 rec.age_group = ''
 
+    @api.depends('name')
+    def _compute_name_upper(self):
+        for rec in self:
+            rec.name_upper = rec.name.upper() if rec.name else False
+
+    def _inverse_name_upper(self):
+        for rec in self:
+            rec.name = rec.name_upper.lower() if rec.name_upper else False
+
     def open_appointments(self):
         return {
             'name': _('Appointments'),
@@ -67,6 +76,9 @@ class HospitalPatient(models.Model):
     )
     name_seq = fields.Char(
         string='Patient ID', required=True, copy=False, readonly=True, index=True, default=lambda self: _('New')
+    )
+    name_upper = fields.Char(
+        string='Name Upper', compute='_compute_name_upper', inverse='_inverse_name_upper'
     )
     gender = fields.Selection(
         string='Gender',
