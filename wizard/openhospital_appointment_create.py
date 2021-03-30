@@ -13,4 +13,7 @@ class HospitalAppointmentCreate(models.TransientModel):
             'date': self.date,
             'notes': 'Created from the wizard'
         }
+        self.patient_id.message_post(
+            body='Appointment Created Successfully', subject='Appointment Creation'
+        )
         self.env['openhospital.appointment'].create(vals)
