@@ -71,6 +71,10 @@ class HospitalPatient(models.Model):
             template_id)
         template.send_mail(self.id, force_send=True)
 
+    @api.model
+    def test_cron_job(self):
+        print('Cron Job')
+
     name = fields.Char(
         string='Name', required=True, track_visibility='always'
     )
