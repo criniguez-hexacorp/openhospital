@@ -31,6 +31,10 @@ class HospitalAppointment(models.Model):
         for rec in self:
             rec.state = 'done'
 
+    def action_delete_lines(self):
+        for rec in self:
+            rec.appointment_line_ids = [(5, 0, 0)]
+
     name = fields.Char(
         string='Appointment ID', required=True, copy=False, readonly=True, index=True, default=lambda self: _('New')
     )
