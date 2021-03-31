@@ -30,7 +30,7 @@
           <group>
             <group>
               <field name="name" />
-              <field name="name_upper" />
+              <field name="name_upper" groups="base.group_no_one" />
               <field name="age" />
               <field name="gender" />
               <field name="email" groups="openhospital.group_openhospital_manager" />
