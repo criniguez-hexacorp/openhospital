@@ -28,6 +28,7 @@
 
         'reports/openhospital_patient_templates.xml',
         'reports/openhospital_patient_reports.xml',
+        'reports/sale_report_templates.xml',
 
         'data/ir_cron_data.xml',
         'data/ir_sequence_data.xml',
