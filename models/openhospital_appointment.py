@@ -35,6 +35,15 @@ class HospitalAppointment(models.Model):
         for rec in self:
             rec.appointment_line_ids = [(5, 0, 0)]
 
+    @api.onchange('partner_id')
+    def _onchange_partner_id(self):
+        for rec in self:
+            return {
+                'domain': {
+                    'order_id': [('partner_id', '=', rec.partner_id.id)]
+                }
+            }
+
     name = fields.Char(
         string='Appointment ID', required=True, copy=False, readonly=True, index=True, default=lambda self: _('New')
     )
@@ -59,3 +68,5 @@ class HospitalAppointment(models.Model):
     appointment_line_ids = fields.One2many(
         'openhospital.appointment.line', 'appointment_id', string='Appointment Lines'
     )
+    partner_id = fields.Many2one('res.partner', string='Customer')
+    order_id = fields.Many2one('sale.order', string='Sale Order')
