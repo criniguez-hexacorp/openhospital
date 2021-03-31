@@ -18,7 +18,7 @@
                     </td>
                   </tr>
                 </table>
-                <!-- <div class="col-xs-8" style="margin: auto">
+                <div class="col-xs-8" style="margin: auto">
                   <table class="table table-condensed" style="border: 3px solid black !important">
                     <tr>
                       <td width="40%">
@@ -45,7 +45,7 @@
                                 <strong>Group: </strong>
                               </p>
                               <p style="text-align: right">
-                                <strong>Ph No: </strong>
+                                <strong>HP No: </strong>
                               </p>
                             </td>
                             <td>
@@ -58,7 +58,22 @@
                       </td>
                     </tr>
                   </table>
-                </div> -->
+                  <table class="table table-condensed" style="border: 3px solid black !important">
+                    <t t-foreach="appointments" t-as="app">
+                      <tr>
+                        <td>
+                          <t t-esc="app['name']" />
+                        </td>
+                        <td>
+                          <td t-esc="app['notes']" />
+                        </td>
+                        <td>
+                          <t t-esc="app['date']" />
+                        </td>
+                      </tr>
+                    </t>
+                  </table>
+                </div>
               </center>
             </div>
           </div>
