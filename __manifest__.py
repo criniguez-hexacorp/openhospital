@@ -17,7 +17,7 @@
 
     # any module necessary for this one to work correctly
     'depends': [
-        'base', 'mail', 'sale',
+        'base', 'mail', 'sale', 'website',
         'report_xlsx'  # https://apps.odoo.com/apps/modules/13.0/report_xlsx/
     ],
 
@@ -43,6 +43,8 @@
         'views/openhospital_appointment_views.xml',
         'views/openhospital_lab_views.xml',
         'views/sale_order_views.xml',
+
+        'views/openhospital_patient_templates.xml',
 
     ],
 
