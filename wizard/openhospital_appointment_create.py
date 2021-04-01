@@ -17,3 +17,7 @@ class HospitalAppointmentCreate(models.TransientModel):
             body='Appointment Created Successfully', subject='Appointment Creation'
         )
         self.env['openhospital.appointment'].create(vals)
+
+    def delete_patient(self):
+        for rec in self:
+            rec.patient_id.unlink()
