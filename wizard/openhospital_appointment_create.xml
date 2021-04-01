@@ -12,8 +12,9 @@
           <field name="date" />
         </group>
         <footer>
+          <button string="Print" name="print_report" type="object" class="oe_highlight" />
           <button string="Create" name="create_appointment" type="object" class="btn-primary" />
-          <button string="Delete Patient" name="delete_patient" type="object" class="oe_highlight" />
+          <button string="Delete" name="delete_patient" type="object" class="oe_highlight" />
           <button string="Cancel" class="btn-secondary" special="cancel" />
         </footer>
       </form>

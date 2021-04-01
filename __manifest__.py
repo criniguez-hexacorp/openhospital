@@ -28,6 +28,8 @@
 
         'reports/openhospital_patient_templates.xml',
         'reports/openhospital_patient_reports.xml',
+        'reports/openhospital_appointment_templates.xml',
+        'reports/openhospital_appointment_reports.xml',
         'reports/sale_report_templates.xml',
 
         'data/ir_cron_data.xml',
@@ -45,7 +47,6 @@
         'views/sale_order_views.xml',
 
         'views/openhospital_patient_templates.xml',
-
     ],
 
     # only loaded in demonstration mode
