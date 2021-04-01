@@ -96,7 +96,8 @@ class HospitalPatient(models.Model):
     age_group = fields.Selection(
         string='Age Group',
         selection=[('major', 'Major'), ('minor', 'Minor')],
-        compute='_set_age_group'
+        compute='_set_age_group',
+        store=True
     )
     notes = fields.Text(string='Notes')
     image = fields.Binary(string='Image')
