@@ -10,6 +10,7 @@
         <header>
           <button string="Create Appointment" name="%(openhospital_appointment_create_wizard_action)d" type="action" class="oe_highlight" context="{'default_patient_id': active_id}" />
           <button string="Send Patient Card" name="action_patient_card_send" type="object" class="oe_highlight" groups="openhospital.group_openhospital_manager" />
+          <button string="Print Report" name="action_print_report" type="object" class="oe_highlight" />
         </header>
         <sheet>
           <field name="active" invisible="1" />
