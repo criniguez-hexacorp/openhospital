@@ -23,8 +23,8 @@
 
     # always loaded
     'data': [
-        'security/ir.model.access.csv',
         'security/openhospital_security.xml',
+        'security/ir.model.access.csv',
 
         'reports/openhospital_patient_templates.xml',
         'reports/openhospital_patient_reports.xml',
