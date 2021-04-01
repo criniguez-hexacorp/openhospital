@@ -44,6 +44,14 @@ class HospitalAppointment(models.Model):
                 }
             }
 
+    @api.model
+    def default_get(self, fields):
+        res = super(HospitalAppointment, self).default_get(fields)
+        res['patient_id'] = self.env['openhospital.patient'].search(
+            [], limit=1)[0].id
+        res['notes'] = 'Default notes from default_get function'
+        return res
+
     name = fields.Char(
         string='Appointment ID', required=True, copy=False, readonly=True, index=True, default=lambda self: _('New')
     )
