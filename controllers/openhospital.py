@@ -45,7 +45,24 @@ class Hospital(http.Controller):
                     'success': True, 'message': 'Success', 'ID': new_patient.id
                 }
             else:
-                args = {
-                    'success': False, 'message': 'name undefined'
-                }
-            return args
+                args = {'success': False, 'message': 'name undefined'}
+        else:
+            args = {'success': False, 'message': 'no json request'}
+        return args
+
+    @http.route('/openhospital/update_patient', type='json', auth='user')
+    def openhospital_update_patient(self, **rec):
+        if request.jsonrequest:
+            if rec['id']:
+                patient = request.env['openhospital.patient'].sudo().search(
+                    [('id', '=', rec['id'])])
+                if patient:
+                    patient.sudo().write(rec)
+                    args = {'success': True, 'message': 'Success'}
+                else:
+                    args = {'success': False, 'message': 'Patient Not Found'}
+            else:
+                args = {'success': False, 'message': 'id undefined'}
+        else:
+            args = {'success': False, 'message': 'no json request'}
+        return args
