@@ -6,3 +6,4 @@ from . import openhospital_appointment
 from . import openhospital_appointment_line
 from . import openhospital_lab
 from . import sale_order
+from . import res_config_settings
