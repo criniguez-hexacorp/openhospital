@@ -32,7 +32,6 @@
         'reports/openhospital_appointment_reports.xml',
         'reports/sale_report_templates.xml',
 
-        'data/ir_cron_data.xml',
         'data/ir_sequence_data.xml',
         'data/mail_template_data.xml',
         'data/openhospital_patient_data.xml',

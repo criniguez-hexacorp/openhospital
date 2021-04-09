@@ -71,10 +71,6 @@ class HospitalPatient(models.Model):
             template_id)
         template.send_mail(self.id, force_send=True)
 
-    @api.model
-    def test_cron_job(self):
-        print('Cron Job')
-
     def action_print_report(self):
         return self.env.ref('openhospital.action_report_openhospital_patient_pdf').report_action(self)
 

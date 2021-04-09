@@ -24,7 +24,7 @@
           </p>
         </div>
       </field>
-      <field name="report_template" ref="action_report_openhospital_patient" />
+      <field name="report_template" ref="action_report_openhospital_patient_pdf" />
       <field name="report_name">Patient Card - ${object.name_seq}</field>
     </record>
 
