@@ -88,7 +88,7 @@ class HospitalPatient(models.Model):
         selection=[('male', 'Male'), ('female', 'Female')],
         default='male'
     )
-    age = fields.Integer(string='Age', track_visibility='always')
+    age = fields.Integer(string='Age', track_visibility='always', group_operator=False)
     age_group = fields.Selection(
         string='Age Group',
         selection=[('major', 'Major'), ('minor', 'Minor')],
