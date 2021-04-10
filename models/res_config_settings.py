@@ -5,6 +5,7 @@ class ResConfigSettings(models.TransientModel):
     _inherit = 'res.config.settings'
 
     note = fields.Char(string='Default Note')
+    module_crm = fields.Boolean(string='CRM')
 
     def set_values(self):
         res = super(ResConfigSettings, self).set_values()
