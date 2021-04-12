@@ -83,4 +83,16 @@
     </field>
   </record>
 
+  <!-- calendar view -->
+  <record id="openhospital_appointment_view_calendar" model="ir.ui.view">
+    <field name="name">openhospital.appointment.view.calendar</field>
+    <field name="model">openhospital.appointment</field>
+    <field name="arch" type="xml">
+      <calendar string="Appointment Calendar" date_start="date" mode="month" quick_add="False" color="patient_id">
+        <field name="name" />
+        <field name="patient_id" />
+      </calendar>
+    </field>
+  </record>
+
 </odoo>

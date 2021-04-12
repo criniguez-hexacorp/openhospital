@@ -25,7 +25,7 @@
   <record id="openhospital_appointment_action" model="ir.actions.act_window">
     <field name="name">Appointments</field>
     <field name="res_model">openhospital.appointment</field>
-    <field name="view_mode">tree,form</field>
+    <field name="view_mode">calendar,tree,form</field>
     <field name="help" type="html">
       <p class="o_view_nocontent_smiling_face">Create your First Appointment!</p>
     </field>
