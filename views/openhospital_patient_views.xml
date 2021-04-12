@@ -96,7 +96,7 @@
     <field name="name">openhospital.patient.view.kanban</field>
     <field name="model">openhospital.patient</field>
     <field name="arch" type="xml">
-      <kanban>
+      <kanban default_group_by="doctor_id">
         <field name="id" />
         <field name="image" />
         <field name="doctor_id" />
